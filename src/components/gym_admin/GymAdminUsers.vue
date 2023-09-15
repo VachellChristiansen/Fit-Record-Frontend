@@ -92,7 +92,7 @@ const usersExpiry = ref('')
 const search = ref('')
 
 const getUsersList = async () => {
-  const GymLink = new BackendGymLink(route.params.Gym, 'production')
+  const GymLink = new BackendGymLink(route.params.Gym)
   const url = GymLink.AdminUsersListLink()
   const options = {
     method: 'POST',
@@ -142,7 +142,7 @@ const handleMakeMember = async (index) => {
     alert('Fill the Expiry Date')
     return
   }
-  const GymLink = new BackendGymLink(route.params.Gym, 'production')
+  const GymLink = new BackendGymLink(route.params.Gym)
   const url = GymLink.AdminMakeMemberLink()
   const options = {
     method: 'POST',

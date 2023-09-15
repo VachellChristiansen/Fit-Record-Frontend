@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
+import AboutPage from '../views/AboutPage.vue'
+import PrivacyPage from '../views/PrivacyPage.vue'
 import GymPage from '../views/gym/GymPage.vue'
 import GymAdminPage from '../views/gym/admin/GymAdminPage.vue'
 import GymAdminLoginPage from '../views/gym/admin/GymAdminLoginPage.vue'
@@ -55,6 +57,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomePage
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: AboutPage
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: PrivacyPage
   },
   {
     path: '/gym/:Gym',

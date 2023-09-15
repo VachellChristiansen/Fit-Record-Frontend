@@ -138,7 +138,7 @@ const membersExpiry = ref('')
 const search = ref('')
 
 const getMembersList = async () => {
-  const GymLink = new BackendGymLink(route.params.Gym, 'production')
+  const GymLink = new BackendGymLink(route.params.Gym)
   const url = GymLink.AdminMembersListLink()
   const options = {
     method: 'POST',
@@ -185,7 +185,7 @@ const handleEditMember = async (index) => {
     alert('Fill the Expiry Date')
     return
   }
-  const GymLink = new BackendGymLink(route.params.Gym, 'production')
+  const GymLink = new BackendGymLink(route.params.Gym)
   const url = GymLink.AdminEditMemberLink()
   const options = {
     method: 'POST',
@@ -213,7 +213,7 @@ const handleRemoveMember = async (index) => {
     `Are you sure you want to remove ${membersShown.value[index]['Name']}'s Membership?`
   )
 
-  const GymLink = new BackendGymLink(route.params.Gym, 'production')
+  const GymLink = new BackendGymLink(route.params.Gym)
   const url = GymLink.AdminRemoveMemberLink(membersShown.value[index]['Email'])
   const options = {
     method: 'DELETE',

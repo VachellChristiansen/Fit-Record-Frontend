@@ -1,21 +1,24 @@
-const BackendDevBaseLink = 'http://localhost:2012'
+const BackendDevBaseLink = 'http://localhost:2012/api'
 const BackendProdBaseLink = 'https://fitrecord.id/api'
-
-function GetBackendBaseLink(environment) {
-  return environment === 'production' ? BackendProdBaseLink : BackendDevBaseLink
+function GetBackendBaseLink() {
+  if (process.env.NODE_ENV === 'development') {
+    return BackendDevBaseLink
+  } else if (process.env.NODE_ENV === 'production') {
+    return BackendProdBaseLink
+  }
 }
 
 class BackendLink {
   BaseLink
-  constructor(environment) {
-    this.BaseLink = `${GetBackendBaseLink(environment)}`
+  constructor() {
+    this.BaseLink = `${GetBackendBaseLink()}`
   }
 }
 
 class BackendGymLink {
   BaseLink
-  constructor(Gym, environment) {
-    this.BaseLink = `${GetBackendBaseLink(environment)}/gym/${Gym}`
+  constructor(Gym) {
+    this.BaseLink = `${GetBackendBaseLink()}/gym/${Gym}`
   }
 
   AdminLink() {
