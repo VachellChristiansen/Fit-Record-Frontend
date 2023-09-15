@@ -7,7 +7,7 @@ import GymAdminLoginPage from '../views/gym/admin/GymAdminLoginPage.vue'
 import { BackendGymLink } from '@/Const.js'
 
 const adminMiddleware = async (to, from, next) => {
-  const GymLink = new BackendGymLink(to.params.Gym, 'dev')
+  const GymLink = new BackendGymLink(to.params.Gym, 'production')
   const url = GymLink.AdminAuthLink()
   const options = {
     method: 'POST',
@@ -30,7 +30,7 @@ const adminMiddleware = async (to, from, next) => {
 }
 
 const gymMiddleware = async (to, from, next) => {
-  const GymLink = new BackendGymLink(to.params.Gym, 'dev')
+  const GymLink = new BackendGymLink(to.params.Gym, 'production')
   const url = GymLink.BaseLink
   const options = {
     method: 'GET',

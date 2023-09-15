@@ -1,5 +1,5 @@
 const BackendDevBaseLink = 'http://localhost:2012'
-const BackendProdBaseLink = 'https://www.fitrecord.co.id'
+const BackendProdBaseLink = 'https://fitrecord.co.id/api'
 
 function GetBackendBaseLink(environment) {
   return environment === 'production' ? BackendProdBaseLink : BackendDevBaseLink

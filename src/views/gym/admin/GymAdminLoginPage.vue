@@ -68,7 +68,7 @@ const usernameValue = ref('')
 const passwordValue = ref('')
 
 const handleAdminLogin = async () => {
-  const GymLink = new BackendGymLink(route.params.Gym, 'dev')
+  const GymLink = new BackendGymLink(route.params.Gym, 'production')
   const url = GymLink.AdminLoginLink()
   const options = {
     method: 'POST',

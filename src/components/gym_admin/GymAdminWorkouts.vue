@@ -63,7 +63,7 @@ const workoutsState = ref('')
 const search = ref('')
 
 const getWorkoutsList = async () => {
-  const DataLink = new BackendDataLink('dev')
+  const DataLink = new BackendDataLink('production')
   const dataUrl = DataLink.DataWorkoutsLink()
   const dataOptions = {
     method: 'GET',
@@ -71,7 +71,7 @@ const getWorkoutsList = async () => {
       'Content-Type': 'application/json'
     }
   }
-  const GymLink = new BackendGymLink(route.params.Gym, 'dev')
+  const GymLink = new BackendGymLink(route.params.Gym, 'production')
   const gymUrl = GymLink.AdminWorkoutsListLink()
   const gymOptions = {
     method: 'POST',
@@ -118,7 +118,7 @@ const handleSearchChange = () => {
 }
 
 const handleAddWorkout = async (id) => {
-  const Link = new BackendGymLink(route.params.Gym, 'dev')
+  const Link = new BackendGymLink(route.params.Gym, 'production')
   const url = Link.AdminAddWorkoutLink()
   const options = {
     method: 'POST',
@@ -144,7 +144,7 @@ const handleAddWorkout = async (id) => {
 }
 
 const handleDeleteWorkout = async (id) => {
-  const Link = new BackendGymLink(route.params.Gym, 'dev')
+  const Link = new BackendGymLink(route.params.Gym, 'production')
   const url = Link.AdminRemoveWorkoutLink(id)
   const options = {
     method: 'DELETE',
