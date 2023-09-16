@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import AboutPage from '../views/AboutPage.vue'
+import ContactPage from '../views/ContactPage.vue'
+import TermsPage from '../views/TermsPage.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
 import GymPage from '../views/gym/GymPage.vue'
 import GymAdminPage from '../views/gym/admin/GymAdminPage.vue'
@@ -62,6 +64,16 @@ const routes = [
     path: '/about',
     name: 'About',
     component: AboutPage
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: ContactPage
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: TermsPage
   },
   {
     path: '/privacy',

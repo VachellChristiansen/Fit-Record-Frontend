@@ -4,12 +4,12 @@
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
       <router-link to="/privacy">Privacy Policy</router-link>
-      <router-link to="/Terms">Terms & Conditions</router-link>
+      <router-link to="/Terms" class="border-b-2 border-black">Terms & Conditions</router-link>
     </div>
-    <HomeContent />
+    <TermsContent />
   </div>
 </template>
 
 <script setup>
-import HomeContent from '@/components/HomeContent.vue'
+import TermsContent from '@/components/TermsContent.vue'
 </script>
