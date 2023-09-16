@@ -1,6 +1,7 @@
 <template>
   <div class="w-full flex flex-col justify-center items-center">
     <h1 class="text-2xl">FIT RECORD OFFICIAL PAGE - Privacy Policy</h1>
+    <br>
     <div class="px-[200px]">
       <h2 class="text-xl font-bold text-center">Introduction</h2>
       <p class="text-md text-justify">
